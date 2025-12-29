@@ -10,12 +10,10 @@ The month layout contains an image and a list of events.
 
 you need to have the typst compiler installed: https://github.com/typst/typst
 
-download this project archive from this link:  
-https://github.com/cwmoss/typst-calendar/archive/refs/heads/main.zip
-
+download this [project archive](https://github.com/cwmoss/typst-calendar/archive/refs/heads/main.zip),
 unzip, open a terminal and change into the unzipped folder
 
-or use `git clone https://github.com/typst/typst.git`
+or use `git clone https://github.com/cwmoss/typst-calendar.git` and `cd typst-calendar`
 
 ### create the demo calendar
 
