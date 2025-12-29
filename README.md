@@ -6,10 +6,14 @@ The month layout contains an image and a list of events.
 
 ## create the pdf
 
-download the project archive from this link:  
+you need to have the typst compiler installed: https://github.com/typst/typst
+
+download this project archive from this link:  
 https://github.com/cwmoss/typst-calendar/archive/refs/heads/main.zip
 
 unzip, open a terminal and change into the unzipped folder
+
+or use `git clone https://github.com/typst/typst.git`
 
     // put your images in the images/ folder
     // create a list of paths to the images
