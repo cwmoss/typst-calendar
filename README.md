@@ -6,7 +6,7 @@ The month layout contains an image and a list of events.
 
 ![demo page](demo.png "demo page, february 2026")
 
-## create the pdf
+## how to use
 
 you need to have the typst compiler installed: https://github.com/typst/typst
 
