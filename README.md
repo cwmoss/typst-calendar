@@ -31,10 +31,10 @@ or use `git clone https://github.com/typst/typst.git`
     // compile the pdf
     typst compile --font-path fonts/ calendar.typ
 
-## font credits
+## credits for demo assets
 
 fonts used: poppins & playwrite found on google fonts
 
-## image credits
+all images can be found on pixabay.com
 
-please look at `image-credits.html` for the list of demo images
+please look at `image-credits.html` for the complete list of demo images
