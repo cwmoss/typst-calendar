@@ -6,10 +6,10 @@
 //    ls images/ > images.txt
 
 #set page(width: 15cm, height: 21cm, margin: 0cm)
-#let year=2026
-#let image_path="./images/"
-#let events_file="./events.txt"
-#let images_file="./images.txt"
+#let year = 2026
+#let image_path = "./images/"
+#let events_file = "./events.txt"
+#let images_file = "./images.txt"
 
 #let days = (
   "Mo", "Di", "Mi", "Do",
@@ -22,13 +22,13 @@
   "September", "Oktober", "November", "Dezember"
 )
 
-#let title_props = (size: 24pt, font: "Poppins", weight: "semibold", fill:fuchsia)
+#let title_props = (size: 24pt, font: "Poppins", weight: "semibold", fill: fuchsia)
 
 // calendar header days display needs
 // the bold variant of the font => default-header-style()
-#let calendar_props = (size: 9pt, font: "Poppins", weight: "regular", fill:black)
+#let calendar_props = (size: 9pt, font: "Poppins", weight: "regular", fill: black)
 
-#let event_props = (size: 9pt, font: "Playwrite DE SAS", weight: "regular", fill:black)
+#let event_props = (size: 9pt, font: "Playwrite DE SAS", weight: "regular", fill: black)
 
 // images.txt contain all the filenames of the images
 #let images=csv(images_file)
@@ -122,25 +122,33 @@
     )
 }
 
-// here the output starts
+// here is where we are starting to create the contents
 
-#range(1, 13).map(month=>{
-[
-  #image(
-    image_path + images.at(month - 1).at(0),
-    width:100%,
-    height: 13cm,
-    // fit: "contain" // "contain" "cover" "stretch"
-  )
+// create 12 times content ...
+#range(1, 13).map(month => {
+    [
+    // layed out as ...
 
+    // the image
+    #image(
+      image_path + images.at(month - 1).at(0),
+      width:100%,
+      height: 13cm,
+      // fit: "contain" // "contain" "cover" "stretch"
+    )
 
-  #v(1cm)
-  #pad(left:1cm)[
+    // 1cm vertical space
+    #v(1cm)
 
-  #calendar-title-month(month:month)
+    // the next content has a left padding of 1cm
+    #pad(left:1cm)[
 
-  #stack(dir:ltr, spacing:0.5cm)[#calendar-mini-month(month:month)][#calendar-events(month:month)]
+      // the month's title
+      #calendar-title-month(month:month)
 
-]]
-}
-).join()
+      // the calendar and the events
+      // "stacked" to 2 columns
+      #stack(dir:ltr, spacing:0.5cm)[#calendar-mini-month(month:month)][#calendar-events(month:month)]
+
+    ]]
+  }).join()
