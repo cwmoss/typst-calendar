@@ -4,6 +4,8 @@ This is an example typst template that creates a PDF with 12 page monthly calend
 
 The month layout contains an image and a list of events.
 
+!(demo.jpg)
+
 ## create the pdf
 
 you need to have the typst compiler installed: https://github.com/typst/typst
