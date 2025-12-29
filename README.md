@@ -15,6 +15,13 @@ unzip, open a terminal and change into the unzipped folder
 
 or use `git clone https://github.com/typst/typst.git`
 
+### create the demo calendar
+
+    // compile the pdf
+    typst compile --font-path fonts/ calendar.typ
+
+### create a custom calendar
+
     // put your images in the images/ folder
     // create a list of paths to the images
     ls images/ > images.txt
