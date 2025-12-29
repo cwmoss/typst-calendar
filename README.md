@@ -4,7 +4,7 @@ This is an example typst template that creates a PDF with 12 page monthly calend
 
 The month layout contains an image and a list of events.
 
-![demo page](demo.jpg "demo page, february 2026")
+![demo page](demo.png "demo page, february 2026")
 
 ## create the pdf
 
