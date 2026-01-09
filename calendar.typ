@@ -68,6 +68,12 @@
   [#{day}]
 }
 
+#let highlight-item-style(day) = {
+  show: pad.with(y: 6pt)
+  set align(center + horizon)
+  [#highlight[#{day}]]
+}
+
 #let get-month-last-day(month, year) = {
   if month in (1,3,5,7,8,10,12) {
     return 31
